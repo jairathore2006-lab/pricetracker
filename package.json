@@ -1,0 +1,23 @@
+{
+  "name": "pricewise-root",
+  "version": "1.0.0",
+  "description": "PriceWise – Shop Smart. Save More. Online Price Tracker and Smart Shopping Assistant",
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "build": "npm run build:server && npm run build:client",
+    "start": "npm --prefix server run start"
+  },
+  "keywords": [
+    "price-tracker",
+    "shopping-assistant",
+    "deal-finder",
+    "price-comparison",
+    "india"
+  ],
+  "author": "PriceWise Team",
+  "license": "MIT"
+}

@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "PriceWise – Price Tracker & Smart Shopping Assistant",
+  "version": "1.0.0",
+  "description": "Live multi-retailer price tracking, fake discount detection, and variant comparison across Indian stores.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.amazon.in/*",
+    "*://*.flipkart.com/*",
+    "*://*.croma.com/*",
+    "*://*.reliancedigital.in/*",
+    "*://*.vijaysales.com/*",
+    "*://*.tatacliq.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PriceWise Deal Inspector"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.in/*",
+        "*://*.flipkart.com/*",
+        "*://*.croma.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
